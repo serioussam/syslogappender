@@ -1,0 +1,18 @@
+<configuration>
+  <appender name="TEST-TLS" class="org.paggarwal.syslogappender.SyslogAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>%date %-5level %logger{35} - %message%n</pattern>
+    </layout>
+
+    <syslogConfig class="org.paggarwal.syslogappender.SyslogConfig">
+      <host>localhost</host>
+      <port>45554</port>
+      <programName>syslog-test</programName>
+      <protocol>TCP_SSL</protocol>
+    </syslogConfig>
+  </appender>
+
+  <root level="DEBUG">
+    <appender-ref ref="TEST-TLS" />
+  </root>
+</configuration>
