@@ -8,7 +8,7 @@
       <host>localhost</host>
       <port>45554</port>
       <programName>syslog-test</programName>
-      <protocol>TCP_SSL</protocol>
+      <protocol>TCP_TLS</protocol>
     </syslogConfig>
   </appender>
 

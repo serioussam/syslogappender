@@ -60,7 +60,7 @@ public class SyslogAppenderTest {
     JoranConfigurator configurator = new JoranConfigurator();
     configurator.setContext(context);
     context.reset();
-    configurator.doConfigure(this.getClass().getClassLoader().getResourceAsStream("logback-syslog4j-udp.xml"));
+    configurator.doConfigure(this.getClass().getClassLoader().getResourceAsStream("logback-syslog-udp.xml"));
 
     Logger logger = context.getLogger("test-udp");
     logger.info("test message over udp");
@@ -78,7 +78,7 @@ public class SyslogAppenderTest {
     JoranConfigurator configurator = new JoranConfigurator();
     configurator.setContext(context);
     context.reset();
-    configurator.doConfigure(this.getClass().getClassLoader().getResourceAsStream("logback-syslog4j-tcp.xml"));
+    configurator.doConfigure(this.getClass().getClassLoader().getResourceAsStream("logback-syslog-tcp.xml"));
 
     Logger logger = context.getLogger("test-tcp");
     logger.info("test message over tcp");
@@ -96,7 +96,7 @@ public class SyslogAppenderTest {
     JoranConfigurator configurator = new JoranConfigurator();
     configurator.setContext(context);
     context.reset();
-    configurator.doConfigure(this.getClass().getClassLoader().getResourceAsStream("logback-syslog4j-tls.xml"));
+    configurator.doConfigure(this.getClass().getClassLoader().getResourceAsStream("logback-syslog-tls.xml"));
 
     Logger logger = context.getLogger("test-tls");
     logger.info("test message over tls");

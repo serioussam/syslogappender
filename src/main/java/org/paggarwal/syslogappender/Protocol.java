@@ -39,7 +39,7 @@ public enum Protocol {
       return new SyslogMessage();
     }
   },
-  TCP_SSL {
+  TCP_TLS {
     public AbstractSyslogMessageSender getMessageSenderInternal(String host, int port) {
       TcpSyslogMessageSender messageSender = new TcpSyslogMessageSender();
       messageSender.setSyslogServerHostname(host);
