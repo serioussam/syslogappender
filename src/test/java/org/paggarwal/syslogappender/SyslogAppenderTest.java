@@ -39,9 +39,10 @@ public class SyslogAppenderTest {
     final SSLTCPNetSyslogServerConfig ssltcpNetSyslogServerConfig = new SSLTCPNetSyslogServerConfig();
     ssltcpNetSyslogServerConfig.setPort(45554);
     ssltcpNetSyslogServerConfig.addEventHandler(new PrintStreamSyslogServerEventHandler(ps));
-    ssltcpNetSyslogServerConfig.setKeyStore(this.getClass().getClassLoader().getResource("test-keystore.jks").getFile());
+    final String keyStore = this.getClass().getClassLoader().getResource("test-keystore.jks").getFile();
+    ssltcpNetSyslogServerConfig.setKeyStore(keyStore);
     ssltcpNetSyslogServerConfig.setKeyStorePassword("password");
-    ssltcpNetSyslogServerConfig.setTrustStore(this.getClass().getClassLoader().getResource("test-keystore.jks").getFile());
+    ssltcpNetSyslogServerConfig.setTrustStore(keyStore);
     ssltcpNetSyslogServerConfig.setTrustStorePassword("password");
 
     SyslogServer.createThreadedInstance("testTcp", tcpNetSyslogServerConfig);

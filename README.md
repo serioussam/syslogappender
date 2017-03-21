@@ -12,7 +12,7 @@ The [existing syslog appender for Logback][logback-syslog-appender] only
 provides the ability to send messages via UDP. Using syslog-java-client allows us to
 send messages via TCP and optionally to encrypt them by sending over TCP with
 TLS. This library also take care of adding message length as per RFC-5424 so log lines containing
-new lines works as well correctly
+new lines work correctly.
 
 ### How?
 
