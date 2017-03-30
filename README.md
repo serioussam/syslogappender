@@ -16,6 +16,7 @@ new lines work correctly.
 
 ### How?
 
+Setup using https://bintray.com/serioussam/oss/org.paggarwal%3Asyslogappender/1.0.0
 Add this to your `pom.xml`:
 
 ``` xml
