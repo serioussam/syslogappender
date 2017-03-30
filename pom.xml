@@ -67,6 +67,34 @@
                     <scmCommentPrefix>[RELEASE] </scmCommentPrefix>
                 </configuration>
             </plugin>
+
+            <plugin>
+               <artifactId>maven-source-plugin</artifactId>
+               <executions>
+                 <execution>
+                   <id>attach-sources</id>
+                   <phase>deploy</phase>
+                   <goals><goal>jar-no-fork</goal></goals> 
+                 </execution>
+               </executions>
+             </plugin>
+             <plugin> 
+               <!-- explicitly define maven-deploy-plugin after other to force exec order -->
+               <artifactId>maven-deploy-plugin</artifactId> 
+               <executions> 
+                 <execution> 
+                   <id>deploy</id>
+                   <phase>deploy</phase>
+                   <goals><goal>deploy</goal></goals> 
+                 </execution> 
+               </executions> 
+             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+      <repository>
+          <id>bintray-repo-maven</id>
+          <url>https://api.bintray.com/maven/serioussam/oss/org.paggarwal:syslogappender/;publish=1</url>
+      </repository>
+    </distributionManagement>
 </project>
