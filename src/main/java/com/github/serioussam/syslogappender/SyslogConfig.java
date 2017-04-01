@@ -1,4 +1,4 @@
-package org.paggarwal.syslogappender;
+package com.github.serioussam.syslogappender;
 
 /**
  * Created by peeyushaggarwal on 3/20/17.

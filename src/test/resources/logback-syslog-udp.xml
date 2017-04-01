@@ -1,10 +1,10 @@
 <configuration>
-  <appender name="TEST-UDP" class="org.paggarwal.syslogappender.SyslogAppender">
+  <appender name="TEST-UDP" class="com.github.serioussam.syslogappender.SyslogAppender">
     <layout class="ch.qos.logback.classic.PatternLayout">
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="org.paggarwal.syslogappender.SyslogConfig">
+    <syslogConfig class="com.github.serioussam.syslogappender.SyslogConfig">
       <host>localhost</host>
       <port>45553</port>
       <programName>syslog-test</programName>

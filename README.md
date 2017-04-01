@@ -16,12 +16,12 @@ new lines work correctly.
 
 ### How?
 
-Setup using https://bintray.com/serioussam/oss/org.paggarwal%3Asyslogappender/1.0.0
+Setup using https://bintray.com/serioussam/oss/com.github.serioussam%3Asyslogappender
 Add this to your `pom.xml`:
 
 ``` xml
     <dependency>
-      <groupId>org.paggarwal</groupId>
+      <groupId>com.github.serioussam</groupId>
       <artifactId>syslogappender</artifactId>
       <version>1.0.0</version>
     </dependency>
@@ -36,12 +36,12 @@ itself.
 #### Logging via TCP with TLS (recommended)
 
 ``` xml
-  <appender name="SYSLOG-TLS" class="org.paggarwal.syslogappender.SyslogAppender">
+  <appender name="SYSLOG-TLS" class="com.github.serioussam.syslogappender.SyslogAppender">
     <layout class="ch.qos.logback.classic.PatternLayout">
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="org.paggarwal.syslogappender.SyslogConfig">
+    <syslogConfig class="SyslogConfig">
       <!-- remote system to log to -->
       <host>localhost</host>
       <!-- remote port to log to -->
@@ -61,12 +61,12 @@ itself.
 #### Logging via TCP
 
 ``` xml
-  <appender name="SYSLOG-TCP" class="org.paggarwal.syslogappender.SyslogAppender">
+  <appender name="SYSLOG-TCP" class="com.github.serioussam.syslogappender.SyslogAppender">
     <layout class="ch.qos.logback.classic.PatternLayout">
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="org.paggarwal.syslogappender.SyslogConfig">
+    <syslogConfig class="SyslogConfig">
       <!-- remote system to log to -->
       <host>localhost</host>
       <!-- remote port to log to -->
@@ -86,12 +86,12 @@ itself.
 #### Logging via UDP
 
 ``` xml
-  <appender name="SYSLOG-UDP" class="org.paggarwal.syslogappender.SyslogAppender">
+  <appender name="SYSLOG-UDP" class="com.github.serioussam.syslogappender.SyslogAppender">
     <layout class="ch.qos.logback.classic.PatternLayout">
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="org.paggarwal.syslogappender.SyslogConfig">
+    <syslogConfig class="SyslogConfig">
       <!-- remote system to log to -->
       <host>localhost</host>
       <!-- remote port to log to -->

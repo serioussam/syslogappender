@@ -1,4 +1,4 @@
-package org.paggarwal.syslogappender;
+package com.github.serioussam.syslogappender;
 
 import com.cloudbees.syslog.SyslogMessage;
 

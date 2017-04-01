@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.paggarwal</groupId>
+    <groupId>com.github.serioussam</groupId>
     <artifactId>syslogappender</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,26 +48,10 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>external.atlassian.jgitflow</groupId>
-                <artifactId>jgitflow-maven-plugin</artifactId>
-                <version>1.0-m5.1</version>
-                <configuration>
-                    <flowInitContext>
-                        <masterBranchName>master</masterBranchName>
-                        <developBranchName>development</developBranchName>
-                        <featureBranchPrefix>feature-</featureBranchPrefix>
-                        <releaseBranchPrefix>release-</releaseBranchPrefix>
-                        <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
-                        <versionTagPrefix>version-</versionTagPrefix>
-                    </flowInitContext>
-                    <username>USERNAME_FOR_A_GIT_USER</username>
-                    <password>PASSWORD_FOR_A_GIT_USER</password>
-                    <noDeploy>true</noDeploy>
-                    <squash>true</squash>
-                    <scmCommentPrefix>[RELEASE] </scmCommentPrefix>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
             </plugin>
-
             <plugin>
                <artifactId>maven-source-plugin</artifactId>
                <executions>
@@ -94,7 +78,15 @@
     <distributionManagement>
       <repository>
           <id>bintray-repo-maven</id>
-          <url>https://api.bintray.com/maven/serioussam/oss/org.paggarwal:syslogappender/;publish=1</url>
+          <url>https://api.bintray.com/maven/serioussam/oss/com.github.serioussam:syslogappender/;publish=1</url>
       </repository>
     </distributionManagement>
+
+    <scm>
+      <connection>scm:git:git@github.com:serioussam/syslogappender.git</connection>
+      <developerConnection>scm:git:git@github.com:serioussam/syslogappender.git</developerConnection>
+      <url>git@github.com:serioussam/syslogappender.git</url>
+      <tag>HEAD</tag>
+    </scm>
+
 </project>
