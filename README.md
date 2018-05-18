@@ -41,7 +41,7 @@ itself.
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="SyslogConfig">
+    <syslogConfig class="com.github.serioussam.syslogappender.SyslogConfig">
       <!-- remote system to log to -->
       <host>localhost</host>
       <!-- remote port to log to -->
@@ -66,7 +66,7 @@ itself.
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="SyslogConfig">
+    <syslogConfig class="com.github.serioussam.syslogappender.SyslogConfig">
       <!-- remote system to log to -->
       <host>localhost</host>
       <!-- remote port to log to -->
@@ -91,7 +91,7 @@ itself.
       <pattern>%date %-5level %logger{35} - %message%n</pattern>
     </layout>
 
-    <syslogConfig class="SyslogConfig">
+    <syslogConfig class="com.github.serioussam.syslogappender.SyslogConfig">
       <!-- remote system to log to -->
       <host>localhost</host>
       <!-- remote port to log to -->
